@@ -1,0 +1,5 @@
+testcase = int(input())
+data = input()
+drinks = list(map(int, data.split()))
+res = sum(drinks) / len(drinks)
+print("{:.12f}".format(res))
