@@ -1,12 +1,19 @@
-def solve(num):
-    n = nums.pop()
-    n -= 2 * nums[2]- nums[1]- nums[0]
+def solve(nums,n):
+  
+    nums.sort()
+    n -= 2 * nums[2] - nums[1] - nums[0]
     if n < 0 or n % 3 != 0:
-        return 'NO'
+        return "NO"
     else:
         return "YES"
 
-test = int(input())
-for _ in range(test):
+n = int(input())
+for _ in range(n):
     nums = list(map(int, input().split()))
-    print(solve(nums))
+    n = nums[-1]
+    nums.pop()
+
+    print(solve(nums,n))
+
+
+aabaaab
