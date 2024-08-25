@@ -1,13 +1,19 @@
-l = int(input())
-for _ in range(l):
-    n = int(input())
-
-    print(n // 2 + (n % 2))
-
-    l = 1
-    r = 3 * n
-    while l < r:
-        print(l,r)
-        l += 3
-        r -= 3
-        #print(l,r)
+n = int(input())
+res = ""
+word = True
+if n==1:
+    print("I hate it")
+for _ in range(n-1):
+    if word:
+        res += 'I hate'
+        word = False
+    else:
+        res += 'that I love'
+        word = True
+if (n-1)%2 == 0:
+    res += " that I hate it"
+    
+    print(res)
+else:
+    res += " that I love it"
+    print(res)
